@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
   
   def create
     session[:name] = params[:name]
-    redirect_to "login" if session[:name].empty?
+    redirect_to "new" if session[:name].empty?
   end
   
   def destroy
