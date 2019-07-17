@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'secrets/new'
-  get 'sessions/new'
-  
+  get "/secret" => "secrets#show"
+  # get 'sessions/new'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   post '/logout' => 'sessions#destroy'
