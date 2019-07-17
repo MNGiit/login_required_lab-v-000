@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
   private
   
   def require_login
-    return head(:forbidden) unless session.include? :name
+    # return head(:forbidden) unless session.include? :name # test doesn't want 403: Forbidden
+    redirect_to 
   end
 end
